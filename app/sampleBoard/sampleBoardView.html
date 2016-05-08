@@ -1,0 +1,38 @@
+<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <md-button class="md-raised md-primary" ng-click="addList($event)">Add List</md-button>
+</section>
+<div class="md-whiteframe-10dp md-col-md='3' listStyle" ng-repeat="(listKey,value) in sampleBoard">
+      <md-subheader class="md-primary md-headline">{{listKey | uppercase}}</md-subheader>
+        <div class="cardSize" ng-repeat="(cardKey,value) in value">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <md-subheader class="md-primary">{{cardKey | uppercase}}</md-subheader>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <ul>
+                        <li ng-repeat="comment in value">{{comment}}</li>
+                    </ul>
+                </md-card-content>
+                <md-card-actions layout="column" layout-align="start">
+                    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                        <md-button class="md-icon-button comments" ng-click="addComment($event,listKey,cardKey)" aria-label="addComments">
+                            <md-icon md-svg-src="./img/comments.svg"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button deleteCard" aria-label="deleteCard" ng-click="deleteCard($event,listKey,cardKey)">
+                            <md-icon md-svg-src="./img/delete.svg"></md-icon>
+                        </md-button>
+                    </section>
+                </md-card-actions>
+            </md-card>
+        </div>
+      <section class="listButtons" layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <md-button class="md-icon-button addCardIcon" ng-click="addCard($event,listKey)" aria-label="addCard">
+              <md-icon md-svg-src="./img/addCard.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button deleteListIcon" ng-click="deleteList($event,listKey)" aria-label="deleteList">
+              <md-icon md-svg-src="./img/deleteList.svg"></md-icon>
+          </md-button>
+      </section>
+  </div>

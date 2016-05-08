@@ -1,0 +1,49 @@
+<md-dialog aria-label="Add your comment here" ng-cloak>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Add Card</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="img/closeDialog.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Card Name</label>
+                    <md-icon md-svg-src="img/cardName.svg" class="cardName"></md-icon>
+                    <input ng-model="card.name" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Comment 1</label>
+                    <md-icon md-svg-src="img/addComment.svg" class="comment1"></md-icon>
+                    <input ng-model="card.comment1" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Comment 2</label>
+                    <md-icon md-svg-src="img/addComment.svg" class="comment2"></md-icon>
+                    <input ng-model="card.comment2" type="text">
+                </md-input-container>
+                <md-input-container class="md-icon-float md-block">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Comment 3</label>
+                    <md-icon md-svg-src="img/addComment.svg" class="comment3"></md-icon>
+                    <input ng-model="card.comment3" type="text">
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button class="md-raised" ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button class="md-raised md-primary" ng-click="addCard(card)" style="margin-right:20px;">
+                Add Card
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
