@@ -4,7 +4,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.sampleBoard',
-  'ngMaterial'
+  'ngMaterial',
+  'ngDragDrop'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/sampleBoard'});

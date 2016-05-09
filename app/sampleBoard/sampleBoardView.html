@@ -3,8 +3,8 @@
 </section>
 <div class="md-whiteframe-10dp md-col-md='3' listStyle" ng-repeat="(listKey,value) in sampleBoard">
       <md-subheader class="md-primary md-headline">{{listKey | uppercase}}</md-subheader>
-        <div class="cardSize" ng-repeat="(cardKey,value) in value">
-            <md-card>
+        <div class="cardSize"  ng-repeat="(cardKey,value) in value">
+            <md-card data-drag="true" jqyoui-draggable>
                 <md-card-title>
                     <md-card-title-text>
                         <md-subheader class="md-primary">{{cardKey | uppercase}}</md-subheader>
